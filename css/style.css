@@ -13,7 +13,7 @@
     --bg-black: #000;
     --color-white: #fff;
     --color-blue : #0f84c9;
-    --card-color : #1f1d1d;
+    --card-color : #302e2e;
 }
 
 body {
@@ -25,6 +25,8 @@ body {
 .header {
     padding: 2rem 6rem;
     background-color: var(--bg-black);
+    position: fixed;
+    width: 100%;
 }
 
 .container-header {
@@ -104,11 +106,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 1000px;
 }
 
 .container-banner {
-    padding: 2rem 6rem;
+    padding: 6rem 6rem 0 6rem;
 }
 
 .container-banner .container-text {
@@ -124,14 +126,41 @@ body {
     font-size: 3rem;
     font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 15px;
     text-shadow: 0 0 25px var(--color-white);
+    margin-bottom: 1rem;
 }
 
 .container-banner .container-text p {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 35px;
+    margin-bottom: 1rem;
+}
+
+.container-banner .icon-social {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.container-banner .icon-social a {
+    margin: 0.5rem 0;
+    font-size: 1.8rem;
+    border: 1px solid var(--color-white);
+    background-color: transparent;
+    padding: 4px 10px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.container-banner .icon-social a:hover {
+    transform: scale(1.1)translateY(-10px);
+    border: 1px solid transparent;
+    background-color: var(--color-blue);
+    box-shadow: 0 0 25px var(--color-white);
+}
+
+.container-banner .container-text .btn {
+    margin-top: 3rem;
 }
 
 .container-banner .container-text .btn .btn_p {
@@ -144,57 +173,152 @@ body {
     box-shadow: 0 0 50px var(--color-white);
 }
 
-/* ----- card services ----- */
+/* ------ cards ------ */
 
-.services{
-    padding: 0 6rem;
-    background-color: var(--bg-black);
-}
-
-.container-services {
-    padding: 2rem 8rem;
+.container-card {
+    width: 100%;
+    padding: 2rem 6rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-.container-services .card-info{
-    background-color: var(--card-color);
-    border-radius: 10px;
-    padding: 1rem 2rem;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.container-services .card-info i {
+.container-card .card-info {
+    background-color: var(--card-color);
+    padding: 1.5rem 2rem;
+    width: 280px;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+.container-card .card-info i {
     color: var(--color-blue);
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-bottom: 10px;
 }
 
-.container-services .card-info .fa-star {
+.container-card .card-info .fa-star {
     color: var(--color-white);
-    font-size: 0.8rem;
-}
-
-.container-services .card-info h2 {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.container-services .card-info p {
     font-size: 1rem;
-    font-weight: 400;
 }
 
-.container-services .card-info span {
-    font-size: 1.9rem;
+.container-card .card-info h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container-card .card-info p span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ---- section system - our mission ------ */
+
+.system {
+    background: url('../img/background-02.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.system .container-system {
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.system .container-system .container-text {
+    padding: 0 4rem;
+}
+
+.system .container-system .container-text h3{
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.system .container-system .container-text h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 0 0 25px var(--color-white);
+    margin-bottom: 15px;
+}
+
+.system .container-system .container-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.system .container-system .container-text .btn_access {
+    text-decoration: none;
+    font-size: 1.3rem;
     font-weight: 600;
+    padding: 12px 75px;
+    background: var(--color-blue);
+    box-shadow: 0 0 25px var(--color-white);
+}
+
+.system .container-system .container-img img{
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* ---- section system - capabalities ------ */
+
+.system .container-satellite {
+    padding: 6rem 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.system .container-satellite .container-text {
+    padding: 0 4rem;
+}
+
+.system .container-satellite .container-text h3{
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.system .container-satellite .container-text h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 0 0 25px var(--color-white);
+    margin-bottom: 15px;
+}
+
+.system .container-satellite .container-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.system .container-satellite .container-text .btn_access {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 12px 75px;
+    background: var(--color-blue);
+    box-shadow: 0 0 25px var(--color-white);
+}
+
+.system .container-satellite .container-img img{
+    height: 500px;
+    border-radius: 10px;
 }
 
 
