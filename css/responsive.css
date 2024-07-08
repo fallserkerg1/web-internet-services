@@ -8,4 +8,30 @@
         display: none;
     }
 
+    .banner .container-text {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        margin-top: 0.7rem;
+    }
+
+    .dropdown_menu {
+        top: 9rem;
+        text-align: center;
+        padding: 2rem 4rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .banner .container-text {
+        padding: 5rem 1.8rem;
+    }
 }
